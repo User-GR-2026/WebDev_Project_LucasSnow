@@ -1,0 +1,36 @@
+.main {
+    text-align: center;
+    background-image: url("images/Mountain.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav {
+    text-align: center;
+    background-color: #2d509c;
+    height: 70px;
+}
+
+nav a {
+    font-size: 2em;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+main {
+    background-color: white;
+    width: 80%;
+    min-height: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.content img {
+    width: 500px;
+    height: 530px;
+    object-fit: cover;
+    border: 4px solid #8b3cff;
+}
