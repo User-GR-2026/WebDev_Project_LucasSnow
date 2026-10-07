@@ -1,0 +1,58 @@
+.main {
+    text-align: center;
+    background-image: url("images/Mountain.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.title{
+    color:white;
+    font-family: "Andale Mono", AndaleMono, monospace;
+    font-weight: 900;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    letter-spacing: 1px;
+}
+
+h1{
+    color:#2d509c;
+    font-weight: 900;
+}
+
+nav {
+    text-align: center;
+    background-color: #2d509c;
+    height: 70px;
+}
+
+nav a {
+    font-size: 2em;
+    color:aliceblue;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+main {
+    background-color: white;
+    width: 80%;
+    min-height: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.content img {
+    width: 500px;
+    height: 450px;
+    object-fit: cover;
+    float: left;
+    padding-right: 20px;
+}
+
+#cabin{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+
+}
