@@ -7,6 +7,18 @@
     background-attachment: fixed;
 }
 
+.title{
+    color:white;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    color:#2d509c;
+    font-weight: 900;
+}
+
 nav {
     text-align: center;
     background-color: #2d509c;
@@ -15,6 +27,7 @@ nav {
 
 nav a {
     font-size: 2em;
+    color:aliceblue;
     margin: 0 20px;
     text-decoration: none;
 }
@@ -30,7 +43,23 @@ main {
 
 .content img {
     width: 500px;
-    height: 530px;
+    height: 450px;
     object-fit: cover;
-    border: 4px solid #8b3cff;
+    float: left;
+    padding-right: 20px;
+}
+
+#cabin{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.TextBox{
+    width: 375px;
+    float: right;
+    text-align: left;
+
+    
 }
