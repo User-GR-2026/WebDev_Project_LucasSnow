@@ -14,9 +14,11 @@
     font-style: normal;
 }
 
-h1{
+.header1{
     color:#2d509c;
-    font-weight: 900;
+    font-family: "Isometra", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav {
@@ -57,9 +59,17 @@ main {
 }
 
 .TextBox{
-    width: 375px;
+    width: 510px;
     float: right;
     text-align: left;
+    padding: 10px;
 }
     
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+.TextLeft{
+    text-align: left;
 }
