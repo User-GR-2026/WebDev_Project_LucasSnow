@@ -1,5 +1,18 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
 .main {
     text-align: center;
+    min-height: 100vh;
+
     background-image: url("images/Mountain.jpg");
     background-size: cover;
     background-position: center;
@@ -7,69 +20,254 @@
     background-attachment: fixed;
 }
 
-.title{
-    color:white;
+.title {
+    color: white;
     font-family: "Isometra", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: clamp(25px, 4vw, 45px);
 }
 
-.header1{
-    color:#2d509c;
+.header1 {
+    color: #2d509c;
     font-family: "Isometra", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: clamp(22px, 3vw, 36px);
 }
 
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
     background-color: #2d509c;
-    height: 70px;
+    min-height: 70px;
+    padding: 10px;
 }
 
 nav a {
-    font-size: 2em;
-    color:aliceblue;
-    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
     text-decoration: none;
+    font-size: 20px;
+
+    padding: 12px 25px;
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #5079c7;
+    color: white;
 }
 
 main {
     background-color: white;
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     min-height: 700px;
+
     margin: 0 auto;
     padding: 40px;
-    box-sizing: border-box;
+}
+
+/* Homepage content */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
 }
 
 .content img {
-    width: 500px;
+    width: 48%;
+    max-width: 500px;
     height: 450px;
+
     object-fit: cover;
-    float: left;
-    padding-right: 20px;
+    border-radius: 8px;
+
+    transition: transform 0.4s ease;
 }
 
-#cabin{
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
-
+.zoom-image {
+    cursor: pointer;
 }
 
-.TextBox{
-    width: 510px;
-    float: right;
+.zoom-image:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.TextBox {
+    flex: 1;
+    min-width: 0;
+
     text-align: left;
     padding: 10px;
 }
-    
-body {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
+
+/* About page content */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
 }
 
-.TextLeft{
+.TextLeft {
+    width: 100%;
+    max-width: 900px;
     text-align: left;
+    line-height: 1.6;
+}
+
+#cabin {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Text animation */
+.animated-text {
+    animation: textAnimation 3s ease infinite;
+}
+
+@keyframes textAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* TABLETS */
+@media screen and (max-width: 900px) {
+
+    main {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .content img {
+        height: 350px;
+    }
+
+    .TextBox {
+        font-size: 18px;
+    }
+}
+
+/* MOBILE PHONES */
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .main {
+        background-attachment: scroll;
+    }
+
+    .title {
+        padding: 10px;
+    }
+
+    nav {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    main {
+        width: 100%;
+        padding: 20px 15px;
+        min-height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    .TextBox {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    #cabin {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
+    .header1 {
+        font-size: 24px;
+    }
+
+    .about-content {
+        gap: 15px;
+    }
+
+    .TextLeft {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media screen and (max-width: 380px) {
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    main {
+        padding: 15px 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
 }
